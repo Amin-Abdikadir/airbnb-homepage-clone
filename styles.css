@@ -1,8 +1,3 @@
-/* Existing content in styles.css */
-.existing-class {
-    color: blue;
-}
-
 /* Add new styles below */
 body {
     font-family: Arial, sans-serif;
@@ -42,16 +37,15 @@ nav ul li a {
 
 /* Hero Section */
 .hero {
-    background-image: url('images/hero-background.jpg');
-    background-size: cover;
-    padding: 100px 20px;
+    padding: 50px 20px;
     text-align: center;
     color: white;
 }
 
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 20px;
+    color: #FF5A5F; /* Match the header background color */
 }
 
 .search-bar {
@@ -72,7 +66,8 @@ nav ul li a {
     border: none;
     cursor: pointer;
 }
-/* Add new styles below the existing ones */
+
+/* Explore Section */
 .explore-nearby {
     padding: 50px 20px;
     background-color: #f8f8f8;
@@ -101,85 +96,8 @@ nav ul li a {
 
 .location-card img {
     width: 100%;
-    height: auto;
-}
-
-.location-card h3 {
-    margin: 10px 0;
-}
-
-.location-card p {
-    color: #777;
-    margin-bottom: 10px;
-}
-
-/* Add new styles below the existing ones */
-.search-bar {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.search-bar input {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ddd;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-}
-
-.search-bar button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #FF5A5F;
-    color: white;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    outline: none;
-}
-
-
-
-/* Explore Nearby Section */
-.explore-nearby {
-    padding: 50px 20px;
-    background-color: #f8f8f8;
-}
-
-.explore-nearby h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.locations {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.location-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 10px;
-    width: calc(33% - 20px);
-    text-align: center;
-}
-
-.location-card img {
-    width: 100%;
-    height: auto;
-}
-
-.location-card h3 {
-    margin: 10px 0;
-}
-
-.location-card p {
-    color: #777;
-    margin-bottom: 10px;
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the entire container */
 }
 
 /* Live Anywhere Section */
@@ -210,11 +128,8 @@ nav ul li a {
 
 .category-card img {
     width: 100%;
-    height: auto;
-}
-
-.category-card h3 {
-    margin: 10px 0;
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the entire container */
 }
 
 /* Hosting Call-to-Action Section */
@@ -296,4 +211,71 @@ footer {
 .social-media a img {
     width: 24px;
     height: 24px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .search-bar {
+        display: block;
+        width: 100%;
+    }
+
+    .search-bar input, .search-bar button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .locations, .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-card, .category-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hosting-cta {
+        padding: 20px;
+    }
+
+    .sign-up {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .footer-links, .social-media {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links a, .social-media a {
+        margin-bottom: 10px;
+    }
 }
